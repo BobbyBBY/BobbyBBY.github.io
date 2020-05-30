@@ -1,71 +1,70 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "zh-cmn-Hans" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-      {% if page.title %}
-        {{ page.title }}
-      {% else %}
-        文章页
+---
+layout: base
+---
+
+{% include header.html type="post" %}
+
+<div class="container-md">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+      {% if page.gh-repo %}
+        {% assign gh_split =  page.gh-repo | split:'/'  %}
+        {% assign gh_user =  gh_split[0]  %}
+        {% assign gh_repo =  gh_split[1]  %}
+
+        <div id="header-gh-btns">
+          {% if page.gh-badge.size > 0 %}
+            {% for badge in page.gh-badge %}
+              {% case badge %}
+                {% when 'star'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'watch'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'fork'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'follow'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              {% endcase %}
+            {% endfor %}
+          {% endif %}
+        </div>
       {% endif %}
-    </title>
 
-    <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <article role="main" class="blog-post">
+        {{ content }}
+      </article>
 
-    {% include favicon.html %}
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+          Tags:
+          {% if site.link-tags %}
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+          {% endfor %}
+          {% else %}
+            {{ page.tags | join: ", " }}
+          {% endif %}
+        </div>
+      {% endif %}
 
-    <link rel="stylesheet" href="{{ "/assets/css/post.css" }}">
-    <link rel="stylesheet" href="{{ "/assets/css/prism.css" }}">
-    {% unless page.line_numbers != null and page.line_numbers == false %}
-    <link rel="stylesheet" href="{{ "/assets/css/prism-line-numbers.css" }}">
-    {% endunless %}
-    <link rel="stylesheet" href="{{ "/assets/css/markdown.css" }}">
-    {% seo %}
-    {% include statistics_head.html %}
-  </head>
+      {% if page.social-share %}
+        {% include social-share.html %}
+      {% endif %}
 
-  <body>
-    <header>
-      {% include header_title.html %}
-      <p id="author" style="display: none">
-        {% if page.author %}
-        {{ page.author }}
-        {% elsif site.name %}
-        {{ site.name }}
+      <ul class="pagination blog-pager">
+        {% if page.previous.url %}
+        <li class="page-item previous">
+          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+        </li>
         {% endif %}
-      </p>
-
-      <div class="article-title-description">
-        <p>发表于 {{ page.date | date: "%Y-%m-%d" }} | 本文共 {{ page.content | number_of_words }} 字</p>
-      </div>
-    </header>
-
-    {% include content.html %}
-
-    {% include footer.html %}
-
-    <script src="{{ "/assets/js/prism.js" }}"></script>
-    <script src="{{ "/assets/js/zooming.min.js" }}"></script>
-    
-    {% unless page.line_numbers != null and page.line_numbers == false %}
-    <script src="{{ "/assets/js/prism-line-numbers.js" }}"></script>
-    {% endunless %}
-    <script src="{{ "/assets/js/post_content_init.js" }}"></script>
-
-    {% if site.lock_menu and site.lock_menu == true %}
-    <script src="{{ "/assets/js/lock_menu.js" }}"></script>
-    {% endif %}
-    {% if site.copy_with_declaration and site.copy_with_declaration == true %}
-    <script src="{{ "/assets/js/copy_with_declaration.js" }}"></script>
-    {% elsif site.lock_copy and site.lock_copy == true %}
-    <script src="{{ "/assets/js/lock_copy.js" }}"></script>
-    {% endif %}
-
-    {% include statistics_body.html %}
-  </body>
-</html>
+        {% if page.next.url %}
+        <li class="page-item next">
+          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% include comments.html %}
+    </div>
+  </div>
+</div>
