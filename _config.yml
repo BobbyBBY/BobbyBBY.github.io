@@ -117,6 +117,15 @@ footer-link-col: "#404040"
 
 # --- Comments --- #
 
+# comments:
+#   gitalk: true
+#   gitalk_clientID: '89ee0521ee28d3bcf945'
+#   gitalk_Secret: 'ccf2af60ca6aca79abe4efb0900b4f16bc8d24a2'
+#   gitalk_repo: 'bobbybby.github.io'
+#   gitalk_owner: 'bobbybby'
+#   gitalk_admin: 'bobbybby'
+#   distractionFreeMode: true
+
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
 #disqus: ""
 
@@ -171,6 +180,8 @@ paginate: 5
 
 kramdown:
   input: GFM
+
+
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
