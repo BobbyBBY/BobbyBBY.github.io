@@ -3,7 +3,10 @@ layout: post # 页面类型
 title: GitHub Pages 博客 # 标题
 subtitle: 教大家如何创建一个和我这个一样的博客 # 子标题
 cover-img: /img/githubpages/cover.png # 封面图片
+gh-repo: BobbyBBY/BobbyBBY.github.io
+gh-badge: [star, fork, follow]
 tags: [github] # 标签
+comments: true
 ---
 这篇文章是教大家如何创建一个和我这个一样的博客。  
 我写博客的目的大部分是为了做笔记，当然笔记一般都在onenote里，写到博客里就是一种更正式的整理，也可以方便大家。选择github pages的原因大抵就是不想被监管，并且能够随意修改风格。  
