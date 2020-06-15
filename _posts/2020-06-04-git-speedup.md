@@ -99,10 +99,10 @@ cd ..
 rm -rf simple-obfs
 ```
 
-# 配置shadowsocks
-账户申请地址  
-如果下述地址申请有问题，麻烦手动填写邀请码，谢谢你这么优秀还使用我的邀请链接(●'◡'●)  
-[申请地址](https://www.yunkly.com/home/ref/8278528127)  
+# 配置shadowsocks  
+[Speed Up](/2020-06-15-speedup)  
+账户[申请地址](https://www.yunkly.com/home/ref/8278528127)  
+谢谢你这么优秀还使用我的邀请链接(●'◡'●)
 
 可以根据上述网站的教程界面通过命令加参数的方式自己启动shadowsocks  
   
