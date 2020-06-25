@@ -916,18 +916,18 @@ pre {
   font-style: italic;
   font-size: 1rem;
 }
-  /*浏览器顶部提示信息*/
-  .ie-tips {
-    position: fixed;
-    top:0;
-    left:0;
-    z-index:999;
-    display: none;
-    height: 30px;
-    line-height: 30px;
-    background: #f9d272;
-    color: #f00;
-    font-size: 14px;
-    text-align: center;
-  }
-  /*浏览器顶部提示信息*/
+/*浏览器顶部提示信息*/
+.ie-tips {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:999;
+  display: none;
+  height: 30px;
+  line-height: 30px;
+  background: #f9d272;
+  color: #f00;
+  font-size: 14px;
+  text-align: center;
+}
+/*浏览器顶部提示信息*/

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="bby.css" rel="stylesheet" type="text/css">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170655554-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-170655554-1');
+  </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTTP Ping</title>
+<style>
+html{height: 100%;overflow: hidden;}
+body{background: #000;color: #C0C0C0;font-weight: bold;font-size: 14px;font-family: Lucida Console;height: 100%;margin: 0 0 0 5px;}
+#divInput{height: 10%;}
+#divContent{height: 90%;overflow: auto;}
+#txtTimeout{width: 40px;}
+button{    margin-left: 10px;}
+</style>
+<script>
+    var intStartTime;
+    var objIMG = new Image();
+    objIMG.onload =
+    objIMG.onerror = 
+    function(){
+        /*
+         * 有回应,取消超时计时
+         */
+        clearTimeout(intTimerID);
+        var delay = new Date() - intStartTime;
+        if(sum==2){
+            var Then = new Date();
+            Then.setTime(Then.getTime()+1*24*60*60*1000);
+            var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
+            document.cookie = cookiestrstore;
+            if(sumTimeout>1){
+                $(".ie-tips").show();
+            }
+            return;
+        }
+        /*
+         * 每次请求间隔限制在1秒以上
+         */
+        setTimeout(ping, delay<1000?(1000-delay):1000);
+    }
+    function ping(){
+        /*
+         * 发送请求
+         */
+        sum++;
+        objIMG.src = strURL + "/" + intStartTime;
+        intStartTime = +new Date();
+        /*
+         * 超时计时
+         */
+        intTimerID = setTimeout(timeout, intTimeout);
+    }
+    function timeout(){
+        sumTimeout++;
+        if(sum==2){
+            var Then = new Date();
+            Then.setTime(Then.getTime()+1*24*60*60*1000);
+            var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
+            document.cookie = cookiestrstore;
+            if(sumTimeout>1){
+                $(".ie-tips").show();
+            }
+            return;
+        }
+        ping();
+    }
+    </script>
+    <script>
+    var arrDelays = [];
+    var sumTimeout;
+    var sum;
+    var strURL;
+    var intTimeout;
+    var intTimerID;
+    strURL = "http://www.google.com";
+    intTimeout = 1800
+    sumTimeout=0;
+    sum=0;
+    var cookiestrread = getCookie("networkcheck");
+    if (cookiestrread != "" && cookiestrread==112) {
+    }
+    else{
+        ping();
+    }
+    function getCookie(cname){
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) 
+      {
+          var c = ca[i].trim();
+          if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+      }
+      return "";
+    }
+    function closeietips(){
+      $(".ie-tips").hide();
+    }
+    </script>
+</head>
+<body>
+    <div class="ie-tips">访问网页是否遇到问题？<a href="http://bobbybby.top/bby" target="_blank">科学加速</a><button onclick="closeietips()">  关闭</button></div>
+<div id="divInput">
+    <span>URL:</span>
+    <input id="txtURL" type="text" />
+    <span>Timeout:</span>
+    <input id="txtTimeout" type="text" value="2000" />
+    <input id="btnSwitch" type="button" value="Start" onclick="handleBtnClick()" />
+    <hr/>
+</div>
+<div id="divContent"></div>
+
+</body>
+</html>

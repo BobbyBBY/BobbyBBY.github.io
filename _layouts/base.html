@@ -46,12 +46,12 @@ common-js:
            */
           clearTimeout(intTimerID);
           var delay = new Date() - intStartTime;
-          if(sum==3){
+          if(sum==2){
               var Then = new Date();
               Then.setTime(Then.getTime()+1*24*60*60*1000);
               var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
               document.cookie = cookiestrstore;
-              if(sumTimeout>2){
+              if(sumTimeout>1){
                   $(".ie-tips").show();
               }
               return;
@@ -75,12 +75,12 @@ common-js:
       }
       function timeout(){
           sumTimeout++;
-          if(sum==3){
+          if(sum==2){
               var Then = new Date();
               Then.setTime(Then.getTime()+1*24*60*60*1000);
               var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
               document.cookie = cookiestrstore;
-              if(sumTimeout>2){
+              if(sumTimeout>1){
                   $(".ie-tips").show();
               }
               return;
@@ -96,7 +96,7 @@ common-js:
       var intTimeout;
       var intTimerID;
       strURL = "http://www.google.com";
-      intTimeout = 2000
+      intTimeout = 1800
       sumTimeout=0;
       sum=0;
       var cookiestrread = getCookie("networkcheck");
