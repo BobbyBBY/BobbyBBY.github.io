@@ -13,6 +13,7 @@ author: 天降杀机
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  更新预告: "preview"
   分类: "/tags"
   关于: "aboutme"
 
