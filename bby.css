@@ -1,0 +1,12 @@
+  /*浏览器顶部提示信息*/
+  .ie-tips {
+    display: none;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    background: #f9d272;
+    color: #f00;
+    font-size: 14px;
+    text-align: center;
+  }
+  /*浏览器顶部提示信息*/

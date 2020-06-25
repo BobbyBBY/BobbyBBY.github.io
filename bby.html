@@ -3,13 +3,93 @@
 <head>
 <meta charset="utf-8">
 <title>账户申请地址</title>
+<link href="bby.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="ie-tips">Sorry. 您使用的浏览器版本过旧，为了更好的访问体验，请升级浏览器至<b>IE8以上</b>，推荐使用<a href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank">Chrome谷歌浏览器</a><a class="js-tip-close">关闭</a></div>
     <p>本博客其他页面使用了谷歌的一些服务，需要科学上网才能获得更好的浏览体验（正常访问也能看到绝大部分内容），下面是科学上网账户申请地址</p>
     <a href="https://www.yunkly.com/home/ref/8278528127">申请地址</a>
     <h1>谢谢你这么优秀还使用我的邀请链接(●'◡'●)</h1>
-    <a href="http://bobbybby.top">博客首页  bobbybby.top</a>
+    博客首页  <a href="http://bobbybby.top">bobbybby.top</a>
     <br><br>
-    <a href="http://bobbybby.top/2020-06-15-speedup">账户申请疑问解答（需要科学上网才能获得更好的浏览体验）</a>
+    <a href="http://bobbybby.top/2020-06-15-speedup">账户申请疑问解答</a>  （需要科学上网才能获得更好的浏览体验）
+    <script>
+        var intStartTime;
+        var objIMG = new Image();
+        objIMG.onload =
+        objIMG.onerror = 
+        function(){
+            /*
+             * 有回应,取消超时计时
+             */
+            clearTimeout(intTimerID);
+            var delay = new Date() - intStartTime;
+            if(sum==3){
+                if(sumTimeout>2){
+                    $(".ie-tips").show();
+                }
+                return;
+            }
+            /*
+             * 每次请求间隔限制在1秒以上
+             */
+            setTimeout(ping, delay<1000?(1000-delay):1000);
+        }
+        function ping(){
+            /*
+             * 发送请求
+             */
+            sum+=1;
+            intStartTime = +new Date();
+            /*
+             * 超时计时
+             */
+            intTimerID = setTimeout(timeout, intTimeout);
+        }
+        function timeout(){
+            sumTimeout+=1;
+            if(sum==3){
+                var Then = new Date(); 
+                Then.setTime(Then.getTime()+1*24*60*60*1000);
+                var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
+                document.cookie = cookiestrstore;
+                if(sumTimeout>2){
+                    $(".ie-tips").show();
+                }
+                return;
+            }
+            ping();
+        }
+        </script>
+        <script>
+        var arrDelays = [];
+        var sumTimeout;
+        var sum;
+        var strURL;
+        var intTimeout;
+        var intTimerID;
+        strURL = "http://www.google.com";
+        intTimeout = 2000
+        sumTimeout=0;
+        sum=0;
+        var cookiestrread = getCookie("networkcheck");
+        if (cookiestrread != "" && cookiestrread==111) {
+        }
+        else{
+            ping();
+        }
+        function getCookie(cname)
+        {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) 
+        {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+        }
+        </script>
 </body>
 </html>

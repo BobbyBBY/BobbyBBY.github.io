@@ -24,12 +24,12 @@ comments: true
 
 # PS：
 
-1. 下表中的密码为ascii码，需要自行转换为真实密码。
+1. 下表中的密码为**ascii码**，需要自行转换为真实密码。
 2. 如有关于链接失效、密码错误等问题可以致函，邮箱在页面最底端。
 3. 打包的资料可能异常混乱，但我不回答任何关于文件、程序运行的问题，只负责打包->发送。
 4. 发送的工程文件可能不能直接运行，因为我会去除部分敏感信息。
 5. 我只会不定期查看邮箱。
-6. OneDrive链接需要科学上网，其他无限制。百度网盘链接下载时可能需要会员。
+6. OneDrive链接需要[科学上网](http://bobbybby.top/2020-06-15-speedup/)，其他无限制。百度网盘链接下载时可能需要会员。
   
 # 代码原创等级说明：
 0——无  
@@ -41,7 +41,7 @@ comments: true
 
 # 课程名称表
 
-|课程名|课件|代码|实验报告|代码原创等级|百度网盘链接|OneDrive链接|密码|
+|课程名|课件|代码|实验报告|代码原创等级|百度网盘链接|OneDrive链接|密码(**ascii码**)|
 |:---|:---|:---|:---|:---|:---|:---|:---|
 |IBM-PC汇编语言程序设计|1|1|1|3|[百度网盘链接](https://pan.baidu.com/s/1mjDQEbgqLArCcY58QthPSQ)|[OneDrive链接](https://1drv.ms/u/s!AhsQ6cw4ZjWRh9EFgc8eXOiMqbRUBg?e=euJSVU)|099098117049|
 |JAVA面向对象编程|1|1|1|3|[百度网盘链接](https://pan.baidu.com/s/1KrPSF4rUDfm3wsQB5gtPDg)|[OneDrive链接](https://1drv.ms/u/s!AhsQ6cw4ZjWRh9EChTMyGRzRIbjcdA?e=er8RbP)|101116118110|

@@ -25,7 +25,7 @@ common-js:
   {% include head.html %}
 
   <body>
-
+    
     {% include gtm_body.html %}
   
     {% include nav.html %}
@@ -35,6 +35,89 @@ common-js:
     {% include footer.html %}
   
     {% include footer-scripts.html %}
-  
+    <script>
+      var intStartTime;
+      var objIMG = new Image();
+      objIMG.onload =
+      objIMG.onerror = 
+      function(){
+          /*
+           * 有回应,取消超时计时
+           */
+          clearTimeout(intTimerID);
+          var delay = new Date() - intStartTime;
+          if(sum==3){
+              var Then = new Date();
+              Then.setTime(Then.getTime()+1*24*60*60*1000);
+              var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
+              document.cookie = cookiestrstore;
+              if(sumTimeout>2){
+                  $(".ie-tips").show();
+              }
+              return;
+          }
+          /*
+           * 每次请求间隔限制在1秒以上
+           */
+          setTimeout(ping, delay<1000?(1000-delay):1000);
+      }
+      function ping(){
+          /*
+           * 发送请求
+           */
+          sum++;
+          objIMG.src = strURL + "/" + intStartTime;
+          intStartTime = +new Date();
+          /*
+           * 超时计时
+           */
+          intTimerID = setTimeout(timeout, intTimeout);
+      }
+      function timeout(){
+          sumTimeout++;
+          if(sum==3){
+              var Then = new Date();
+              Then.setTime(Then.getTime()+1*24*60*60*1000);
+              var cookiestrstore = "networkcheck=111;expires=" + Then.toGMTString();
+              document.cookie = cookiestrstore;
+              if(sumTimeout>2){
+                  $(".ie-tips").show();
+              }
+              return;
+          }
+          ping();
+      }
+      </script>
+      <script>
+      var arrDelays = [];
+      var sumTimeout;
+      var sum;
+      var strURL;
+      var intTimeout;
+      var intTimerID;
+      strURL = "http://www.google.com";
+      intTimeout = 5000
+      sumTimeout=0;
+      sum=0;
+      var cookiestrread = getCookie("networkcheck");
+      if (cookiestrread != "" && cookiestrread==111) {
+      }
+      else{
+          ping();
+      }
+      function getCookie(cname){
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) 
+        {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+      }
+      function closeietips(){
+        $(".ie-tips").hide();
+      }
+      </script>
   </body>
 </html>
