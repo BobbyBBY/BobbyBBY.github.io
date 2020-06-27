@@ -5,7 +5,7 @@ subtitle: 教大家如何创建一个和我这个一样的博客 # 子标题
 cover-img: /img/githubpages/cover.png # 封面图片
 gh-repo: BobbyBBY/BobbyBBY.github.io
 gh-badge: [star, fork, follow]
-tags: [github] # 标签
+tags: [github,technique] # 标签
 comments: true
 ---
 这篇文章是教大家如何创建一个和我这个一样的博客。  
