@@ -83,11 +83,11 @@ excerpt_length: 50
 navbar-col: "#F5F5F5"
 navbar-text-col: "#404040"
 navbar-border-col: "#EAEAEA"
-page-col: "#FFFFFF"
+page-col: "#F5F5F5"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-footer-col: "#F5F5F5"
-footer-text-col: "#777777"
+footer-col: "#F0F0F0"
+footer-text-col: "#888888"
 footer-link-col: "#404040"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
@@ -118,14 +118,7 @@ footer-link-col: "#404040"
 
 # --- Comments --- #
 
-# comments:
-#   gitalk: true
-#   gitalk_clientID: '89ee0521ee28d3bcf945'
-#   gitalk_Secret: 'ccf2af60ca6aca79abe4efb0900b4f16bc8d24a2'
-#   gitalk_repo: 'bobbybby.github.io'
-#   gitalk_owner: 'bobbybby'
-#   gitalk_admin: 'bobbybby'
-#   distractionFreeMode: true
+comments:
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
 #disqus: ""
