@@ -1,9 +1,9 @@
 ---
 layout: post # 页面类型
-title: Git SS 加速 # 标题
-subtitle: Git使用SS加速clone # 子标题
+title: Git SSH使用SS加速 # 标题
+subtitle: Git在SSH协议下，使用SS加速clone # 子标题
 cover-img: /img/gitclonespeedup/cover.jpg # 封面图片
-tags: [git, shadowsocks,technique] # 标签
+tags: [git,shadowsocks,technique] # 标签
 ---
 本方法讲述在linux命令行下的git-clone加速方法，有可视化桌面的版本亦可使用本教程，但是有更简单的方法，搜索关键词即可。  
 有个小问题说在前面，ss代理必须一直打开，如果不想使用代理了，需要删除在ssh配置文件中修改的的内容，否则git将无法联网。  
