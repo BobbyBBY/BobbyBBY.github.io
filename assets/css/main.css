@@ -327,6 +327,25 @@ img {
   -webkit-transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
   -moz-transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
 }
+.navbar-custom .navbar-brand-logo {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+  -webkit-transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+}
+.navbar-custom.top-nav-short .navbar-brand-logo {
+  opacity: 100;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  visibility: visible;
+}
+
+.navbar-brand-logo-img{
+  border-radius: 50%;
+}
+
 
 .navbar-custom .avatar-container .avatar-img-border {
   width: 100%;
