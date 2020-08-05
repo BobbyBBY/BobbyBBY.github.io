@@ -15,7 +15,6 @@ subtitle: 搜索标题
 <!-- <div style="position: fixed; right: 16px; bottom: 20px;">
     <img src="/myPlugins/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
 </div> -->
-<link rel="stylesheet" href="{{ "/myPlugins/search/css/cb-search.min.css" | prepend: site.baseurl }}">
 
 
 &nbsp;  
