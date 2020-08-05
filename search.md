@@ -16,7 +16,6 @@ subtitle: 搜索标题
     <img src="/myPlugins/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
 </div> -->
 
-<script src="{{ "/myPlugins/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
 
 &nbsp;  
 &nbsp;  
