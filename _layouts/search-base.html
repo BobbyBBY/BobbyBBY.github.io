@@ -3,6 +3,7 @@ common-css:
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/main.css"
   - "/assets/css/hux-blog.min.css"
+  - "/myPlugins/search/css/cb-search.min.css"
 common-ext-css:
   - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     sri: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -20,6 +21,8 @@ common-js:
   - "/assets/js/main.js"
   - "/assets/js/hux-blog.js"
   - "/assets/js/jquery.nav.js"
+  - "/myPlugins/search/js/bootstrap3-typeahead.min.js"
+  - "/myPlugins/search/js/cb-search.js"
 ---
 
 <!DOCTYPE html>
@@ -33,7 +36,16 @@ common-js:
   
     {% include nav.html %}
 
-    {{ content }}
+{% include header.html type="page" %}
+
+<div class="container-md" role="main">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      {{ content }}
+      {% include comments.html %}
+    </div>
+  </div>
+</div>
 
     {% include footer.html %}
   
