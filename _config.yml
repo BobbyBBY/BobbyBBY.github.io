@@ -31,7 +31,6 @@ avatar: "/assets/img/icon.jpg"
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
 title-img: "/assets/img/icon.jpg"
-# round-avatar: true
 
 
 # --- Footer options --- #
@@ -44,7 +43,7 @@ social-network-links:
   # facebook: deanattali
   github: BobbyBBY
   # twitter: daattali
-  rss: false
+  # rss: false
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -70,7 +69,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "bobbybby.top"
+# url-pretty: "bobbybby.top"
 
 # Create a "tags" index page and make tags on each post clickable
 link-tags: true
@@ -95,20 +94,20 @@ footer-link-col: "#000000"
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-#navbar-img: "/assets/img/bgimage.png"
-#footer-img: "/assets/img/bgimage.png"
-#page-img: "/assets/img/bgimage.png"
+# navbar-img: "/assets/img/bgimage.png"
+# footer-img: "/assets/img/bgimage.png"
+# page-img: "/assets/img/bgimage.png"
 
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "UA-170655554-1"
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "GTM-58S5BNC"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
