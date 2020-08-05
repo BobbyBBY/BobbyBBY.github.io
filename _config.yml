@@ -15,6 +15,7 @@ author: 天降杀机
 navbar-links:
   更新预告: "preview"
   分类: "tags"
+  搜索标题: "search"
   关于: "aboutme"
 
 
@@ -211,13 +212,12 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  # - jekyll-search
 
 # 是否显示底部“返回顶部”按钮
 backtop: false
 
 # 是否显示底部“搜索”按钮
-Jekyll-Search: true
+Jekyll-Search: false
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
