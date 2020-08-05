@@ -61,7 +61,8 @@ $(document).ready(function () {
         time1 = 0;
     });
 
-    $.getJSON("/myPlugins/search/cb-search.json").done(function (data) {
+    $.ajax("/myPlugins/search/cb-search.json").done(function (data) {
+        data2 = data
         if (data.code == 0) {
             for (var index in data.data) {
                 var item = data.data[index];

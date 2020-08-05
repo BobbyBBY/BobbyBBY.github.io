@@ -81,13 +81,13 @@ excerpt_length: 50
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#F0F0F0"
+navbar-col: "#F5F5F5"
 navbar-text-col: "#000000"
-navbar-border-col: "#E5E5E5"
-page-col: "#F0F0F0"
+navbar-border-col: "#EFEFEF"
+page-col: "#F5F5F5"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-footer-col: "#E0E0E0"
+footer-col: "#E5E5E5"
 footer-text-col: "#666666"
 footer-link-col: "#000000"
 
@@ -172,6 +172,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
+baseurl: ""
 
 kramdown:
   input: GFM
