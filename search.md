@@ -17,7 +17,6 @@ subtitle: 搜索标题
 </div> -->
 <link rel="stylesheet" href="{{ "/myPlugins/search/css/cb-search.min.css" | prepend: site.baseurl }}">
 
-<script src="{{ "/myPlugins/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
 
 &nbsp;  
 &nbsp;  
