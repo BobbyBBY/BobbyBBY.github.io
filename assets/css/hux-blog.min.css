@@ -1,0 +1,52 @@
+@media (min-width:1200px){.post-container,.sidebar-container{padding-right:5%}}
+@media (min-width:768px){.post-container{padding-right:5%}}
+.sidebar-container{color:#bfbfbf;font-size:14px}
+.sidebar-container h5{color:gray;padding-bottom:1em}
+.sidebar-container h5 a{color:gray!important;text-decoration:none}
+.sidebar-container a{color:#bfbfbf!important}
+.sidebar-container a:hover,.sidebar-container a:active{color:#0085a1!important}
+.sidebar-container .tags a{border-color:#bfbfbf}
+.sidebar-container .tags a:hover,.sidebar-container .tags a:active{border-color:#0085a1}
+.sidebar-container .short-about img{width:80%;display:block;border-radius:5px;margin-bottom:20px}
+.sidebar-container .short-about p{margin-top:0;margin-bottom:20px}
+.sidebar-container .short-about .list-inline>li{padding-left:0}
+.catalog-container{padding:0}
+.side-catalog{display:block;overflow:auto;height:100%;padding-bottom:40px;width:195px}
+.side-catalog.fixed{position:fixed;top:75px}
+.side-catalog.fold .catalog-toggle::before{content:"+"}
+.side-catalog.fold .catalog-body{display:none}
+.side-catalog .catalog-toggle::before{content:"−";position:relative;margin-right:5px;bottom:1px}
+.side-catalog .catalog-body{position:relative;list-style:none;height:auto;overflow:hidden;padding-left:0;padding-right:5px;text-indent:0}
+.side-catalog .catalog-body li{position:relative;list-style:none}
+.side-catalog .catalog-body li a{padding-left:10px;max-width:180px;display:inline-block;vertical-align:middle;height:30px;line-height:30px;overflow:hidden;text-decoration:none;white-space:nowrap;text-overflow:ellipsis}
+.side-catalog .catalog-body .h1_nav,.side-catalog .catalog-body .h2_nav,.side-catalog .catalog-body .h3_nav{margin-left:0;font-size:13px;font-weight:700}
+.side-catalog .catalog-body .h4_nav,.side-catalog .catalog-body .h5_nav,.side-catalog .catalog-body .h6_nav{margin-left:10px;font-size:12px}
+.side-catalog .catalog-body .h4_nav a,.side-catalog .catalog-body .h5_nav a,.side-catalog .catalog-body .h6_nav a{max-width:170px}
+.side-catalog .catalog-body .active{border-radius:4px;background-color:#F5F5F5}
+.side-catalog .catalog-body .active a{color:#0085a1!important}
+@media (max-width:1200px){.side-catalog{display:none}}
+#backtop a { /* back to top button */
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    width:50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px; /* 小按钮到浏览器底边的距离 */
+    right: 60px; /* 小按钮到浏览器右边框的距离 */
+    color: rgb(64,120,192); /* 小按钮中文字的颜色 */
+    z-index: 1000;
+    background: #fff; /* 小按钮底色 */
+    padding: auto; /* 小按钮中文字到按钮边缘的距离 */
+    border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    font-weight: bold; /* 小按钮中文字的粗细 */
+    text-decoration: none !important;
+    box-shadow:0 1px 2px rgba(0,0,0,.15), 0 1px 0 #ffffff inset;
+}
+
+#backtop a:hover { /* 小按钮上有鼠标悬停时 */
+    background: rgba(64,120,192,0.8); /* 小按钮的底色 */
+    color: #fff; /* 文字颜色 */
+}

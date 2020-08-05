@@ -67,5 +67,22 @@ layout: base
       <span id="busuanzi_container_page_pv"> | 访问量：<span id="busuanzi_value_page_pv"></span> 次</span>
       {% include comments.html %}
     </div>
+    
+    <!-- Side Catalog Container -->
+    {% if page.catalog %}
+    <div class="
+        col-lg-2 col-lg-offset-0
+        visible-lg-block
+        sidebar-container
+        catalog-container">
+        <div class="side-catalog">
+            <hr class="hidden-sm hidden-xs">
+            <h5>
+                <a class="catalog-toggle" href="#">CATALOG</a>
+            </h5>
+            <ul class="catalog-body"></ul>
+        </div>
+    </div>
+  {% endif %}
   </div>
 </div>

@@ -2,6 +2,7 @@
 common-css:
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/main.css"
+  - "/assets/css/hux-blog.min.css"
 common-ext-css:
   - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     sri: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -17,6 +18,7 @@ common-ext-js:
     sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 common-js:
   - "/assets/js/main.js"
+  - "/assets/js/hux-blog.js"
 ---
 
 <!DOCTYPE html>
@@ -119,5 +121,51 @@ common-js:
         $(".ie-tips").hide();
       }
       </script>
+      <!-- Side Catalog -->
+      {% if page.catalog %}
+      <script type="text/javascript">
+          function generateCatalog (selector) {
+              var P = $(".blog-post"),a,n,t,l,i,c;
+              a = P.find('h1,h2,h3,h4,h5,h6');
+              a.each(function () {
+                  n = $(this).prop('tagName').toLowerCase();
+                  i = "#"+$(this).prop('id');
+                  t = $(this).text();
+                  c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+                  l = $('<li class="'+n+'_nav"></li>').append(c);
+                  $(selector).append(l);
+              });
+              return true;    
+          }
+
+          generateCatalog(".catalog-body");
+
+          // toggle side catalog
+          $(".catalog-toggle").click((function(e){
+              e.preventDefault();
+              $('.side-catalog').toggleClass("fold")
+          }))
+
+          /*
+          * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+          * Fork by Hux to support padding
+          */
+          async("{{ '/js/jquery.nav.js' | prepend: site.baseurl }}", function () {
+              $('.catalog-body').onePageNav({
+                  currentClass: "active",
+                  changeHash: !1,
+                  easing: "swing",
+                  filter: "",
+                  scrollSpeed: 700,
+                  scrollOffset: 0,
+                  scrollThreshold: .2,
+                  begin: null,
+                  end: null,
+                  scrollChange: null,
+                  padding: 80
+              });
+          });
+      </script>
+      {% endif %}
   </body>
 </html>

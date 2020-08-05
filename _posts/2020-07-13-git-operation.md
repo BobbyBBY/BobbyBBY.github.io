@@ -5,6 +5,7 @@ subtitle: Git命令之创建、切换、回滚 # 子标题
 cover-img: /img/gitoperation/cover.jpg # 封面图片
 tags: [git,technique] # 标签
 comments: true
+catalog: true
 ---
 Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。本文以生动的形式介绍Git的基本操作，包括创建仓库、分支切换、操作回滚等。
 

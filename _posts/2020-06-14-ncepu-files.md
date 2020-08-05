@@ -5,6 +5,7 @@ subtitle: “华北电力大学（保定）计算机科学与技术专业”资�
 cover-img: /img/ncepufiles/cover.png # 封面图片
 tags: [files,ncepu] # 标签
 comments: true
+catalog: true
 ---
 ## 说明
 
