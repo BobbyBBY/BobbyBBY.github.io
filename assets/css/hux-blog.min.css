@@ -11,7 +11,7 @@
 .sidebar-container .short-about p{margin-top:0;margin-bottom:20px}
 .sidebar-container .short-about .list-inline>li{padding-left:0}
 .catalog-container{padding:0}
-.side-catalog{display:block;overflow:auto;height:100%;padding-bottom:40px;width:195px}
+.side-catalog{display:block;overflow:auto;height:100%;padding-bottom:40px;width:195px;max-height:700px}
 .side-catalog.fixed{position:fixed;top:75px}
 .side-catalog.fold .catalog-toggle::before{content:"+"}
 .side-catalog.fold .catalog-body{display:none}

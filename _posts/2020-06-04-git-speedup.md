@@ -6,37 +6,39 @@ cover-img: /img/gitclonespeedup/cover.jpg # 封面图片
 tags: [git,shadowsocks,technique] # 标签
 catalog: true
 ---
-本方法讲述在linux命令行下的git-clone加速方法，有可视化桌面的版本亦可使用本教程，但是有更简单的方法，搜索关键词即可。  
-有个小问题说在前面，ss代理必须一直打开，如果不想使用代理了，需要删除在ssh配置文件中修改的的内容，否则git将无法联网。  
+本方法讲述在linux命令行下的git-clone加速方法。对于有可视化桌面的版本亦可使用本教程，但是有更简单的方法，搜索关键词即可。  
 
-## 本文目录
+---
 
-1. GitHub远程克隆方式
-2. 配置ssh
-3. 安装shadowsocks以及插件
-4. 配置shadowsocks
-5. 加速！！！
-  
 ## GitHub远程克隆方式  
 
 GitHub可以选择https和ssh方式克隆仓库，https方式在更新私人仓库时需要每次输入账户和密码，ssh方式需要手动生成密钥，但是只需配置一次。  
-https方式:  
+
+**https方式:**  
+
 在这里复制url  
-![httpsurl](/img/gitclonespeedup/https.png)
+
+![httpsurl](/img/gitclonespeedup/https.png)  
   
-然后执行git clone [url]
-![https](/img/gitclonespeedup/githubhttps.png)
+然后执行git clone [url]  
+
+![https](/img/gitclonespeedup/githubhttps.png)  
   
 如果是私人仓库，以后的每次连接远程仓库进行操作的时候，都需要输入账户和密码。  
 
-ssh方式:  
+**ssh方式:**  
+
 在这里复制url  
-![sshurl](/img/gitclonespeedup/ssh.png)
+
+![sshurl](/img/gitclonespeedup/ssh.png)  
   
-然后执行git clone [url]
-![sshnokey](/img/gitclonespeedup/sshnokey.png)
+然后执行git clone [url]  
+
+![sshnokey](/img/gitclonespeedup/sshnokey.png)  
   
 这时提示没有权限，因为我们没有配置ssh。  
+
+---
 
 ## 配置ssh
 
@@ -47,31 +49,42 @@ ssh-keygen -t rsa -C "[github账户]"
 ```
 
 之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。  
+
 ![sshkey](/img/gitclonespeedup/sshkey.png)  
-成功的话会在 ~/ 下生成 .ssh 文件夹，进文件夹，打开 id_rsa.pub，复制里面的 key，包括“ssh-rsa”。  
-![sshkeycopy](/img/gitclonespeedup/sshkeycopy.png)
+
+成功的话会在 ~/ 下生成 .ssh 文件夹，进入文件夹，打开 id_rsa.pub，复制里面的 key，包括 “ ssh-rsa ” 。  
+
+![sshkeycopy](/img/gitclonespeedup/sshkeycopy.png)  
   
 打开github设置页  
-![githubsetting](/img/gitclonespeedup/githubsetting.png)
 
-点击“SSH and GPG keys”-“New SSH key”，粘贴刚才复制的key并确认
-![githubssh](/img/gitclonespeedup/githubssh.png)
-![githubnewssh](/img/gitclonespeedup/githubnewssh.png)
-![githubnewssh2](/img/gitclonespeedup/githubnewssh2.png)
+![githubsetting](/img/gitclonespeedup/githubsetting.png)  
+
+点击 “ SSH and GPG keys ” - “ New SSH key ” ，粘贴刚才复制的key并确认  
+
+![githubssh](/img/gitclonespeedup/githubssh.png)  
+
+![githubnewssh](/img/gitclonespeedup/githubnewssh.png)  
+
+![githubnewssh2](/img/gitclonespeedup/githubnewssh2.png)  
   
-为了验证是否成功，输入以下命令：
+为了验证是否成功，输入以下命令：  
 
 ```shell
 ssh -T git@github.com
 ```
 
-如果看到成功提示，则表示连接成功。（本文没有提供此处的错误解决方案）
-![gitsshsucceed](/img/gitclonespeedup/gitsshsucceed.png)
+如果看到成功提示，则表示连接成功。（本文没有提供此处的错误解决方案）  
+
+![gitsshsucceed](/img/gitclonespeedup/gitsshsucceed.png)  
   
-再执行git clone [url]，即可成功clone
-![gitsshclone](/img/gitclonespeedup/gitsshclone.png)
+再执行git clone [url]，即可成功clone  
+
+![gitsshclone](/img/gitclonespeedup/gitsshclone.png)  
   
 这时，你是不是发现clone的速度特别慢……  
+
+---
 
 ## 安装shadowsocks以及插件
 
@@ -109,15 +122,17 @@ cd ..
 rm -rf simple-obfs
 ```
 
+&nbsp;  
+
+---
+
 ## 配置shadowsocks  
 
 [Speed Up](/2020-06-15-speedup)  
 账户[申请地址](https://www.yunkly.com/home/ref/8278528127)  
 谢谢你这么优秀还使用我的邀请链接(●'◡'●)
 
-可以根据上述网站的教程界面通过命令加参数的方式自己启动shadowsocks  
-  
-当然也可以通过本文下述方式启动，我当然推荐下述方式啦  
+你可以根据上述网站的教程界面通过命令加参数的方式自己启动shadowsocks，也可以通过本文下述方式启动，我当然推荐下述方式啦。  
   
 在某路径下生成配置文件[文件名].json，其中填入账户申请网站提供的信息，一般来说会给你几个节点，有几个节点就配置几个文件
 
@@ -141,9 +156,7 @@ rm -rf simple-obfs
 ss-local -c ……[文件名].json
 ```
 
-使用bash命令再简化启动过程
-配置好你的ss配置文件后，放入shadowsocks文件夹  
-并生成命令shadowsocks.bash
+使用bash命令再简化启动过程。配置好你的ss配置文件后，放入shadowsocks文件夹，并生成命令shadowsocks.bash
 
 ```shell
 if [ $1 == "us" ]
@@ -170,37 +183,48 @@ else
 fi
 ```
 
-执行以下命令即可通过hk节点启动代理  
+执行以下命令即可启动代理，并连接hk节点  
 
 ```shell
 bash shadowsocks.sh hk
 ```
 
-![ssstart](/img/gitclonespeedup/ssstart.png)
+![ssstart](/img/gitclonespeedup/ssstart.png)  
 
 可能遇到的问题，提示  
+
+{: .box-error}
 This system doesn't provide enough entropy to quickly generate high-quality random numbers  
-![errorrandom](/img/gitclonespeedup/errorrandom.png)
-只需要按照提示安装软件即可
+
+![errorrandom](/img/gitclonespeedup/errorrandom.png)  
+
+只需要按照提示安装软件即可  
 
 ```shell
 sudo apt-get install rng-tools
 ```
 
+&nbsp;  
+
+---
+
 ## 加速
 
 这时还需要配置代理才可以真正实现加速  
   
-首先，需要安装connect-proxy命令
+首先，需要安装connect-proxy命令  
 
 ```shell
 sudo apt-get install connect-proxy
 ```
 
-root用户修改 /etc/ssh/ssh_config 文件  
-普通用户修改  ~/.ssh/config 文件  
+root用户覆盖 /etc/ssh/ssh_config 文件  
+
+普通用户覆盖  ~/.ssh/config 文件  
+
 没有则新建文件，并将权限至少设为600/644  
-文件追加，注意linux和windows空格、回车或者制表符的区别：
+
+修改文件时，请注意linux和windows空格、回车或者制表符的区别：  
 
 ```config
 Host github.com *.github.com
@@ -211,7 +235,8 @@ Host github.com *.github.com
     User git
 ```
 
-再执行git clone [url]，可以看到速度飞起
+再执行git clone [url]，可以看到速度飞起  
+
 ![speed](/img/gitclonespeedup/speed.png)  
 
 PS：在平时使用过程中，ss代理必须一直打开。如果不想使用代理了，需要删除在ssh配置文件中修改的的内容，否则git将无法联网。  
