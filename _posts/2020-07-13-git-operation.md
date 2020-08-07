@@ -3,7 +3,7 @@ layout: post # 页面类型
 title: Git操作 # 标题
 subtitle: Git命令之创建、切换、回滚 # 子标题
 cover-img: /img/gitoperation/cover.jpg # 封面图片
-tags: [git,technique] # 标签
+tags: [git,技术] # 标签
 comments: true
 catalog: true
 ---
