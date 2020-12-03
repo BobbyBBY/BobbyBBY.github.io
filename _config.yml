@@ -44,7 +44,7 @@ social-network-links:
   # facebook: deanattali
   github: BobbyBBY
   # twitter: daattali
-  # rss: false
+  rss: true
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
