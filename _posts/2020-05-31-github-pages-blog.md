@@ -69,7 +69,7 @@ jekyll相当于一个编译工具，安装好jekyll后，你可以通过jekyll�
   
 **windows下的安装步骤：**  
 
-1. 首先点击下载安装Ruby installer [https://rubyinstaller.org/](https://rubyinstaller.org/)
+1. 首先点击下载安装Ruby installer，路径不要出现空格及中文，最好安装在根目录 [https://rubyinstaller.org/](https://rubyinstaller.org/)
 2. 点击下载RubyGems [https://rubygems.org/pages/download](https://rubygems.org/pages/download)
 3. 下载完成后解压至你想放的位置，在该位置打开命令行或powershell执行：  
 
