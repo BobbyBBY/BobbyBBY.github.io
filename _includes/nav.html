@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% endif %}">
-  <div class="ie-tips">访问网页是否遇到问题？<a href="http://bobbybby.top/bby" target="_blank">科学加速</a><button onclick="closeietips()">  关闭</button></div>
+  <div class="ie-tips">访问网页是否遇到问题？<a href="{{site.url}}/bby" target="_blank">科学加速</a><button onclick="closeietips()">  关闭</button></div>
   {%- if site.title-img -%}
     <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img alt="{{ site.title }} Logo" class="navbar-brand-logo-img" src="{{ site.title-img }}"/></a>
   {%- elsif site.title -%}
