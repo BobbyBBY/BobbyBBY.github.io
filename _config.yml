@@ -15,8 +15,9 @@ url: https://bobbybby.top
 
 navbar-links:
   更新预告: "preview"
-  分类: "tags"
   搜索标题: "search"
+  预言家: "prophet"
+  分类: "tags"
   关于: "aboutme"
 
 
@@ -192,6 +193,7 @@ defaults:
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
       readtime: false # add estimated reading time on all blog posts
+      donate: false
   -
     scope:
       path: "" # all files
