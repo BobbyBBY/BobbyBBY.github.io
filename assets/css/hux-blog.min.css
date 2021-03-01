@@ -2,8 +2,8 @@
 @media (min-width:768px){.post-container{padding-right:5%}}
 .sidebar-container{color:#bfbfbf;font-size:14px}
 .sidebar-container h5{color:gray;padding-bottom:1em}
-.sidebar-container h5 a{color:gray!important;text-decoration:none}
-.sidebar-container a{color:#bfbfbf!important}
+.sidebar-container h5 a{color:black!important;text-decoration:none}
+.sidebar-container a{color:black!important}
 .sidebar-container a:hover,.sidebar-container a:active{color:#0085a1!important}
 .sidebar-container .tags a{border-color:#bfbfbf}
 .sidebar-container .tags a:hover,.sidebar-container .tags a:active{border-color:#0085a1}
