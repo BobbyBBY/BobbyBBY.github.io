@@ -19,11 +19,11 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
 可以把Git简单得比作游戏的存档系统，若存档系统是按照时间排序的，肯定早忘了谁是谁了，而Git这个存档系统则可以帮你管理存档间的关系。  
 
-![game](/img/gitoperation/game.png)  
+![game](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/game.png)  
 
 下图是常见的Git分支示意图。这里与游戏存档不一样的就是Git的分支是可以合并的。下文就不要用游戏存档系统看待Git了，当涉及到分支合并的时候他们就已经不是同一个东西了。  
 
-![git](/img/gitoperation/git.png)  
+![git](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/git.png)  
 
 Git对文件的管理涉及3个区域——工作区、缓冲区和历史记录区。  
 
@@ -32,7 +32,7 @@ Git对文件的管理涉及3个区域——工作区、缓冲区和历史记录�
 3. **历史记录区**即是存放历史版本的区域。  
 
 下图是三个区域的关系：  
-![rbw](/img/gitoperation/rbw.png)
+![rbw](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/rbw.png)
 
 ---
 
@@ -54,10 +54,10 @@ git init
 这里的远程指的是GitHub
 
 1. 在repository页面点击 “ New ”
-![newR](/img/gitoperation/newR.png)  
+![newR](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/newR.png)  
 
 2. 在之后的页面完善仓库名、介绍以及其他选项
-![newR2](/img/gitoperation/newR2.png)  
+![newR2](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/newR2.png)  
 
 除了在GitHub直接创建远程仓库外，还可以将本地仓库发布为远程仓库，这里不赘述（关键词 “ git发布本地仓库 ” ）。  
 
@@ -69,7 +69,7 @@ git clone [url]
 
 克隆GitHub远程仓库时，在GitHub仓库页复制url，请注意选择 “ Use HTTPS ” 。如何使用SSH协议克隆参见[Git SSH使用SS加速](/2020-06-04-git-speedup)  
 
-![clone](/img/gitoperation/clone.png)  
+![clone](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/clone.png)  
 
 1. 亦可以克隆别人发布在自己服务器的仓库，这时就需要别人给你提供url  
 2. 克隆的远程仓库默认只有master分支，需要手动拉去其他分支  
@@ -107,7 +107,7 @@ git branch [分支名]
 
 创建远程分支：  
 
-![newB](/img/gitoperation/newB.png)
+![newB](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/newB.png)
 
 #### 切换分支
 
@@ -129,7 +129,7 @@ git pull 则是将远程主机的最新内容拉下来后直接合并。
 
 示意图如下:  
 
-![pull](/img/gitoperation/pull.png)
+![pull](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/pull.png)
 
 指定分支名更新：  
 
@@ -202,19 +202,19 @@ git merge [分支名]
 如果出现冲突，只能手动更改。
 冲突示意图：  
 
-![conflic1](/img/gitoperation/conflic1.png)  
+![conflic1](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/conflic1.png)  
 
 如果遇到冲突，git会提示：  
 
-![conflic2](/img/gitoperation/conflic2.png)  
+![conflic2](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/conflic2.png)  
 
 打开文件可以看到出现冲突的地方被git自动标注了：  
 
-![conflic3](/img/gitoperation/conflic3.png)  
+![conflic3](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/conflic3.png)  
 
 这时只能手动修改出现冲突的地方，先修改尖括号间的内容，再删除尖括号（避免污染别的内容）。  
 
-![conflic4](/img/gitoperation/conflic4.png)  
+![conflic4](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/conflic4.png)  
 
 #### 一种简单的分支维护方式
 
@@ -222,7 +222,7 @@ git merge [分支名]
 2. 在dev分支开发新功能，通过测试后merge到master分支  
 3. 在test分支上随时对需要的地方进行测试  
 
-![branch](/img/gitoperation/branch.png)  
+![branch](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/branch.png)  
 
 ---
 
@@ -253,16 +253,16 @@ git log --oneline
 git log --graph
 ```
 
-![gitlog](/img/gitoperation/gitlog.png)  
+![gitlog](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/gitlog.png)  
 
-![gitlog-oneline](/img/gitoperation/gitlog-oneline.png)  
+![gitlog-oneline](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/gitlog-oneline.png)  
 
 #### 恢复到存档点
 
 恢复存档点的意思是撤销该存档点**及**以后的所有操作，并将该状态设置为新存档点。  
 这里的含义有点绕，看图更明了。  
 
-![revert](/img/gitoperation/revert.gif)  
+![revert](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/revert.gif)  
 
 ```shell
 git revert [存档点名称]
@@ -276,7 +276,7 @@ git revert [存档点名称]
 回滚存档点的意思是撤销并删除该存档点以后的所有操作。  
 看图以注意reset与revert的区别。  
 
-![reset](/img/gitoperation/reset.gif)  
+![reset](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/reset.gif)  
 
 ```shell
 git reset [存档点名称]
@@ -348,7 +348,7 @@ single_alpha_alpha/
 
    下图表示在存档4之后，通过 “ **已被纳入管理** ” 方法在之后的版本中忽略了大文件，同时克隆时指定版本深度，就不会把曾经包含大文件的版本克隆过来了。  
 
-   ![depth](/img/gitoperation/depth.png)  
+   ![depth](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/depth.png)  
 
 * 直接加速  
 

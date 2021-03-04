@@ -36,65 +36,65 @@ catalog: true
 
 ## 解压
 
-![decompression](/img/modelsiminstallation/decompression.png)  
+![decompression](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/decompression.png)  
 
 ## 运行安装程序  
 
 1. 双击运行安装软件  
-   ![install](/img/modelsiminstallation/install.png)  
+   ![install](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/install.png)  
 
 2. 进入欢迎界面  
-   ![welcome](/img/modelsiminstallation/welcome.png)  
+   ![welcome](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/welcome.png)  
 
 3. 点击next  
-   ![next](/img/modelsiminstallation/next.png)  
+   ![next](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/next.png)  
 
 4. 选择安装路径，应避免中文  
-   ![location](/img/modelsiminstallation/location.png)  
+   ![location](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/location.png)  
 
 5. 阅读须知后点击agree  
-   ![agree](/img/modelsiminstallation/agree.png)  
+   ![agree](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/agree.png)  
 
 6. 安装中，请等待  
-   ![installing](/img/modelsiminstallation/installing.png)  
+   ![installing](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/installing.png)  
 
 7. 根据喜好添加桌面快捷方式  
-   ![shortcut](/img/modelsiminstallation/shortcut.png)  
+   ![shortcut](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/shortcut.png)  
 
 8. 添加环境变量，尽量选择yes  
-   ![path](/img/modelsiminstallation/path.png)  
+   ![path](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/path.png)  
 
 9.  点击no  
-    ![HW](/img/modelsiminstallation/HW.png)  
+    ![HW](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/HW.png)  
     
 10. 安装完成  
-    ![finish](/img/modelsiminstallation/finish.png)  
+    ![finish](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/finish.png)  
 
 ## 破解
 
 1. Crack文件夹中的这两个文件复制到安装目录的win64文件夹下面, 如有重名，直接覆盖  
-   ![crack](/img/modelsiminstallation/crack.png)  
+   ![crack](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/crack.png)  
    
-   ![crack_path](/img/modelsiminstallation/crack_path.png)  
+   ![crack_path](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/crack_path.png)  
 
 2. 修改mgls64.dll的可读性，去掉只读复选框  
-   ![mgls64](/img/modelsiminstallation/mgls64.png)  
+   ![mgls64](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/mgls64.png)  
 
 3. 以管理员身份运行patch_dll.bat。如果命令行窗口一闪而过，或者没有出现步骤7的情况，请继续步骤4  
-   ![patch1](/img/modelsiminstallation/patch1.png)  
+   ![patch1](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/patch1.png)  
 
-   ![patch2](/img/modelsiminstallation/patch2.png)  
+   ![patch2](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/patch2.png)  
 
 4. 右击开始，使用管理员打开PowerShell  
-   ![powershell](/img/modelsiminstallation/powershell.png)  
+   ![powershell](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/powershell.png)  
 
 5. 进入ModelSim安装目录的win64目录，注意路径最好嵌在单引号内。如果没有单引号，无法进入带空格的路径。请手动输入下面的命令，如果直接复制下面这条命令至powershell，单引号会被过滤掉。  
    ```bat
    cd ‘C:\Program Files\ModelSim\win64’
    ```  
-   ![powershell1](/img/modelsiminstallation/powershell1.png)  
+   ![powershell1](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/powershell1.png)  
 
-   ![powershell2](/img/modelsiminstallation/powershell2.png)  
+   ![powershell2](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/powershell2.png)  
 
 6. 依次执行以下命令，注意第二行的英文句号  
    ```bat
@@ -102,14 +102,14 @@ catalog: true
    MentorKG.exe -patch . 
    attrib +r mgls.dll
    ```  
-   ![powershell3](/img/modelsiminstallation/powershell3.png)  
+   ![powershell3](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/powershell3.png)  
 
 7. 执行第二条命令时会稍微卡顿，并弹出记事本。将记事本另存到ModelSim的安装目录。如有重名，直接覆盖。  
-   ![txt](/img/modelsiminstallation/txt.png)  
+   ![txt](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/txt.png)  
 
-   ![txt_path](/img/modelsiminstallation/txt_path.png)  
+   ![txt_path](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/txt_path.png)  
    
 8. 新建环境变量（环境变量在“我的电脑–属性–高级系统设置–环境变量”），变量名为MGLS_LICENSE_FILE，变量值为上面LICENSE.TXT文件的路径，如我的是C:\Program Files\Modelsim\LICENSE.TXT  
-   ![path1](/img/modelsiminstallation/path1.png)  
+   ![path1](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/path1.png)  
 
-   ![path2](/img/modelsiminstallation/path2.png)  
+   ![path2](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/path2.png)  

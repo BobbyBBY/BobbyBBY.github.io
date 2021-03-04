@@ -28,11 +28,11 @@ GitHub Page，一般多用于托管个人的静态网站，所以现在很多人
 
 最后生成仓库（create repository）。  
 
-![repository](/img/githubpages/repository.png)  
+![repository](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/githubpages/repository.png)  
 
 新建时一定要选择公开仓库（Public），否则无法访问。如果不小心选择了私密仓库（Private），可以在以后的设置中调回来。但是改变公开性后，这个项目不会自动发布，需要在设置中点击“Change theme”（如下图），随便选择一个主题来重新发布项目，如果你的仓库中已经有内容，选择主题不会覆盖原有的内容（这是我尝试的结果，官方没有给出解答）  
 
-![re-public](/img/githubpages/re-public.png)  
+![re-public](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/githubpages/re-public.png)  
 
 在仓库中新建一个index.html文件，在里面输入任意内容，然后再把代码推送到GitHub上，过大约几十秒再访问你的网页，可以看到网页展示了index.html里面的内容。  
   
@@ -100,7 +100,7 @@ jekyll server
 
 如出现了以下错误提示  
 
-![error](/img/githubpages/error.png)  
+![error](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/githubpages/error.png)  
 
 解决方案一（推荐）  
 

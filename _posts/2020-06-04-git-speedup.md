@@ -18,11 +18,11 @@ GitHub可以选择https和ssh方式克隆仓库，https方式在更新私人仓�
 
 在这里复制url  
 
-![httpsurl](/img/gitclonespeedup/https.png)  
+![httpsurl](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/https.png)  
   
 然后执行git clone [url]  
 
-![https](/img/gitclonespeedup/githubhttps.png)  
+![https](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/githubhttps.png)  
   
 如果是私人仓库，以后的每次连接远程仓库进行操作的时候，都需要输入账户和密码。  
 
@@ -30,11 +30,11 @@ GitHub可以选择https和ssh方式克隆仓库，https方式在更新私人仓�
 
 在这里复制url  
 
-![sshurl](/img/gitclonespeedup/ssh.png)  
+![sshurl](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/ssh.png)  
   
 然后执行git clone [url]  
 
-![sshnokey](/img/gitclonespeedup/sshnokey.png)  
+![sshnokey](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/sshnokey.png)  
   
 这时提示没有权限，因为我们没有配置ssh。  
 
@@ -50,23 +50,23 @@ ssh-keygen -t rsa -C "[github账户]"
 
 之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。  
 
-![sshkey](/img/gitclonespeedup/sshkey.png)  
+![sshkey](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/sshkey.png)  
 
 成功的话会在 ~/ 下生成 .ssh 文件夹，进入文件夹，打开 id_rsa.pub，复制里面的 key，包括 “ ssh-rsa ” 。  
 
-![sshkeycopy](/img/gitclonespeedup/sshkeycopy.png)  
+![sshkeycopy](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/sshkeycopy.png)  
   
 打开github设置页  
 
-![githubsetting](/img/gitclonespeedup/githubsetting.png)  
+![githubsetting](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/githubsetting.png)  
 
 点击 “ SSH and GPG keys ” - “ New SSH key ” ，粘贴刚才复制的key并确认  
 
-![githubssh](/img/gitclonespeedup/githubssh.png)  
+![githubssh](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/githubssh.png)  
 
-![githubnewssh](/img/gitclonespeedup/githubnewssh.png)  
+![githubnewssh](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/githubnewssh.png)  
 
-![githubnewssh2](/img/gitclonespeedup/githubnewssh2.png)  
+![githubnewssh2](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/githubnewssh2.png)  
   
 为了验证是否成功，输入以下命令：  
 
@@ -76,11 +76,11 @@ ssh -T git@github.com
 
 如果看到成功提示，则表示连接成功。（本文没有提供此处的错误解决方案）  
 
-![gitsshsucceed](/img/gitclonespeedup/gitsshsucceed.png)  
+![gitsshsucceed](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/gitsshsucceed.png)  
   
 再执行git clone [url]，即可成功clone  
 
-![gitsshclone](/img/gitclonespeedup/gitsshclone.png)  
+![gitsshclone](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/gitsshclone.png)  
   
 这时，你是不是发现clone的速度特别慢……  
 
@@ -189,14 +189,14 @@ fi
 bash shadowsocks.sh hk
 ```
 
-![ssstart](/img/gitclonespeedup/ssstart.png)  
+![ssstart](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/ssstart.png)  
 
 可能遇到的问题，提示  
 
 {: .box-error}
 This system doesn't provide enough entropy to quickly generate high-quality random numbers  
 
-![errorrandom](/img/gitclonespeedup/errorrandom.png)  
+![errorrandom](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/errorrandom.png)  
 
 只需要按照提示安装软件即可  
 
@@ -237,7 +237,7 @@ Host github.com *.github.com
 
 再执行git clone [url]，可以看到速度飞起  
 
-![speed](/img/gitclonespeedup/speed.png)  
+![speed](https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/speed.png)  
 
 PS：在平时使用过程中，ss代理必须一直打开。如果不想使用代理了，需要删除在ssh配置文件中修改的的内容，否则git将无法联网。  
 
