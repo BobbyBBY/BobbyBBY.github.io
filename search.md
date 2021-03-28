@@ -1,5 +1,5 @@
 ---
-layout: search-base
+layout: page
 title: Search
 subtitle: 搜索标题
 ---
