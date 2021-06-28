@@ -2,7 +2,7 @@
 layout: post # 页面类型
 title: GitHub Pages 博客 # 标题
 subtitle: 教大家如何创建一个和我这个一样的博客 # 子标题
-cover-img: /img/githubpages/cover.png # 封面图片
+cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/githubpages/cover.png # 封面图片
 gh-repo: BobbyBBY/BobbyBBY.github.io
 gh-badge: [star, fork, follow]
 tags: [github,技术] # 标签

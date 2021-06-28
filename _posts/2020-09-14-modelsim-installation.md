@@ -2,7 +2,7 @@
 layout: post # 页面类型
 title: ModelSim 10.X 安装教程 # 标题
 subtitle: 轻量级硬件仿真软件 # 子标题
-cover-img: /img/modelsiminstallation/cover.png # 封面图片
+cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/cover.png # 封面图片
 tags: [modelsim, 技术] # 标签
 comments: true
 catalog: true

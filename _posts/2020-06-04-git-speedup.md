@@ -2,7 +2,7 @@
 layout: post # 页面类型
 title: Git SSH使用SS加速 # 标题
 subtitle: Git在SSH协议下，使用SS加速clone # 子标题
-cover-img: /img/gitclonespeedup/cover.jpg # 封面图片
+cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/cover.jpg # 封面图片
 tags: [git,shadowsocks,技术] # 标签
 catalog: true
 ---

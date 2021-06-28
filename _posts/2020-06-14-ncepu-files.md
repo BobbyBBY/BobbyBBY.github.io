@@ -2,7 +2,7 @@
 layout: post # 页面类型
 title: 华电计科资料 # 标题
 subtitle: “华北电力大学（保定）计算机科学与技术专业”资料 # 子标题
-cover-img: /img/ncepufiles/cover.png # 封面图片
+cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/ncepufiles/cover.png # 封面图片
 tags: [文档] # 标签
 comments: true
 catalog: true
