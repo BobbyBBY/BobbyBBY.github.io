@@ -2,7 +2,7 @@
 layout: post # 页面类型
 title: 图论 # 标题
 subtitle: 《图论及其引用》课程基本概念总结 # 子标题
-cover-img: /img/graph_theroy/cover.jpg # 封面图片
+cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/graph_theroy/cover.jpg # 封面图片
 tags: [课程] # 标签
 comments: true
 catalog: false

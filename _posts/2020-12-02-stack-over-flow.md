@@ -2,7 +2,7 @@
 layout: post # 页面类型
 title: 溢出攻击体验 # 标题
 subtitle: 在 ASLR 和 NX 下溢出攻击体验 # 子标题
-cover-img: /img/stack_overlow_attack/cover.png # 封面图片
+cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/stack_overlow_attack/cover.png # 封面图片
 tags: [技术] # 标签
 comments: true
 catalog: true
