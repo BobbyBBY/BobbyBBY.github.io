@@ -763,9 +763,11 @@ footer .footer-custom-content {
 }
 
 .pagination .page-item.next {
+  margin-right: auto;
+}
+.pagination .page-item.previous {
   margin-left: auto;
 }
-
 @media (min-width: 768px) {
   .pagination.blog-pager {
     margin-top: 0.625rem;
