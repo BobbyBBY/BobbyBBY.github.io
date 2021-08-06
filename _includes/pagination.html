@@ -77,7 +77,7 @@
         		<!-- <a class="page-link disabled">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a> -->
                 <div class="page-link disabled" id="pgjump_btn" href="/">
                     <a >第</a>
-                    <input type="text" size="1" id="pgjump_content" title="Enter跳转" onkeyup="if(this.value==1){document.getElementById('pgjump_btn').href='/'}else{document.getElementById('pgjump_btn').href='/page'+this.value}" onkeydown="if(event.keyCode==13) {window.location=document.getElementById('pgjump_btn').href;return false;}">
+                    <input class="page-jump-input" size="1" type="text"id="pgjump_content" title="Enter跳转" onkeyup="if(this.value==1){document.getElementById('pgjump_btn').href='/'}else{document.getElementById('pgjump_btn').href='/page'+this.value}" onkeydown="if(event.keyCode==13) {window.location=document.getElementById('pgjump_btn').href;return false;}">
                     <a >页 / 共{{paginator.total_pages}}页</a>
                 </div>
         <!-- 只有一页的情况 -->
@@ -90,7 +90,7 @@
 	        	<a class="page-link">末页</a>
                 <div class="page-link disabled" id="pgjump_btn" href="/">
                     <a >第</a>
-                    <input type="text" size="1" id="pgjump_content" title="Enter跳转" onkeyup="if(this.value==1){document.getElementById('pgjump_btn').href='/'}else{document.getElementById('pgjump_btn').href='/page'+this.value}" onkeydown="if(event.keyCode==13) {window.location=document.getElementById('pgjump_btn').href;return false;}">
+                    <input height="0.5rem" type="text" size="1" id="pgjump_content" title="Enter跳转" onkeyup="if(this.value==1){document.getElementById('pgjump_btn').href='/'}else{document.getElementById('pgjump_btn').href='/page'+this.value}" onkeydown="if(event.keyCode==13) {window.location=document.getElementById('pgjump_btn').href;return false;}">
                     <a >页 / 共{{paginator.total_pages}}页</a>
                 </div>
 	        {% endif %}	        

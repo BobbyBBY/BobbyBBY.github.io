@@ -828,6 +828,9 @@ footer .footer-custom-content {
   display: block;
   z-index: 9999;
 }
+.page-jump-input{
+  font-size:0.7rem;
+}
 /* --- Tables --- */
 
 table {
