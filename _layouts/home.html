@@ -36,9 +36,10 @@ layout: page
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ post.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
+        <!-- 简化界面，无需read more -->
+        <!-- {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
           <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
+        {% endif %} -->
       </div>
     </div>
 
@@ -58,18 +59,5 @@ layout: page
    </article>
   {% endfor %}
 </div>
+{% include pagination.html %}
 
-{% if paginator.total_pages > 1 %}
-<ul class="pagination main-pager">
-  {% if paginator.previous_page %}
-  <li class="page-item previous">
-    <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">&larr; 上一页</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="page-item next">
-    <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">下一页 &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}

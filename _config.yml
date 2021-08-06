@@ -84,14 +84,14 @@ excerpt_length: 50
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#E5E5E5"
+navbar-col: "#f0f0f2"
 navbar-text-col: "#000000"
 navbar-border-col: "#EFEFEF"
-page-col: "#F5F5F5"
-link-col: "#008AFF"
+page-col: "#fbfbfd"
+link-col: "#999999"
 hover-col: "#0085A1"
-footer-col: "#E5E5E5"
-footer-text-col: "#666666"
+footer-col: "#f0f0f2"
+footer-text-col: "#86868b"
 footer-link-col: "#000000"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
@@ -174,7 +174,7 @@ timezone: "Asia/Shanghai"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 7
 baseurl: ""
 
 kramdown:
@@ -192,7 +192,7 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-      readtime: false # add estimated reading time on all blog posts
+      readtime: false # add estimated reading time on all blog posts 似乎不支持中文
       donate: false
   -
     scope:

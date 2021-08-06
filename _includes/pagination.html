@@ -1,0 +1,99 @@
+<!-- {% if paginator.total_pages > 1 %}
+<ul class="pagination main-pager">
+  {% if paginator.previous_page %}
+  <li class="page-item previous">
+    <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">&larr; 上一页</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="page-item next">
+    <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">下一页 &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %} -->
+<div class="pagination">
+    <div class="btn-group">
+        {% if paginator.total_pages > 1 %}
+	        {% if paginator.page == 1 %}
+	        	<a class="page-link">首页</a>
+	        {% else %}
+	        	<a href="/" class="page-link">首页</a>
+	        {% endif %}
+	        <!-- 如果有前一页的页号 -->
+	        {% if paginator.previous_page %}
+		        <!-- 如果前一页的页号是1 -->
+		        {% if paginator.previous_page == 1 %}
+			        <a href="/" class="page-link">&larr;</a>
+			    {% else %}
+       				<a href="/page{{paginator.previous_page}}" class="page-link">&larr;</a>
+        		{% endif %}
+        	{% else %}
+        		<a disabled="disabled" href="javascript:;" class="page-link">&larr;</a>
+                {% endif %}
+            {% if paginator.page <= 3 %}
+                {% for num in (1..paginator.total_pages) %}
+                    {% if forloop.index <= 5 %}
+                        {% if num != paginator.page %}
+                            {% if num == 1 %}
+                                <a href="/" class="page-link">1</a>
+                            {% else %}
+                                <a href="/page{{num}}" class="page-link">{{num}}</a>
+                            {% endif %}
+                        {% endif %}
+                        <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                        {% if num == paginator.page %}
+                            <a href="javascript:;" class="active page-link">{{num}}</a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% assign index1 = paginator.page|plus:1 %}
+                {% assign index2 = paginator.page|plus:2 %}
+                {% if index1 > paginator.total_pages and paginator.total_pages != 4 %}
+                    <a href="/page{{paginator.page|plus:-4}}" class="page-link">{{paginator.page|plus:-4}}</a>
+                {% endif %}
+                {% if index2 > paginator.total_pages %}
+                    <a href="/page{{paginator.page|plus:-3}}" class="page-link">{{paginator.page|plus:-3}}</a>
+                {% endif %}
+                <a href="/page{{paginator.page|plus:-2}}" class="page-link">{{paginator.page|plus:-2}}</a>
+                <a href="/page{{paginator.page|plus:-1}}" class="page-link">{{paginator.page|plus:-1}}</a>
+                <a href="javascript:;" class="active page-link">{{paginator.page}}</a>
+                {% if index1 <= paginator.total_pages %}
+                    <a href="/page{{paginator.page|plus:1}}" class="page-link">{{paginator.page|plus:1}}</a>
+                {% endif %}
+                {% if index2 <= paginator.total_pages %}
+                    <a href="/page{{paginator.page|plus:2}}" class="page-link">{{paginator.page|plus:2}}</a>
+                {% endif %}
+            {% endif %}
+ 
+        	{% if paginator.next_page %}
+		        <a href="/page{{paginator.next_page}}" class="page-link">&rarr;</a>
+		        <a href="{{ site.baseurl}}/page{{paginator.total_pages}}" class="page-link">末页</a>
+        	{% else %}
+		        <a disabled="disabled" href="javascript:;" class="page-link">&rarr;</a>
+		        <a class="page-link">末页</a>
+        	{% endif %}
+        		<!-- <a class="page-link disabled">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a> -->
+                <div class="page-link disabled" id="pgjump_btn" href="/">
+                    <a >第</a>
+                    <input type="text" size="1" id="pgjump_content" title="Enter跳转" onkeyup="if(this.value==1){document.getElementById('pgjump_btn').href='/'}else{document.getElementById('pgjump_btn').href='/page'+this.value}" onkeydown="if(event.keyCode==13) {window.location=document.getElementById('pgjump_btn').href;return false;}">
+                    <a >页 / 共{{paginator.total_pages}}页</a>
+                </div>
+        <!-- 只有一页的情况 -->
+        {% else %}
+        	{% if paginator.posts %}
+        		<a class="page-link">首页</a>
+	        	<a disabled="disabled" href="javascript:;" class="page-link">&larr;</a>
+	        	<a href="javascript:;" class="active page-link">1</a>
+	        	<a disabled="disabled" href="javascript:;" class="page-link">&rarr;</a>
+	        	<a class="page-link">末页</a>
+                <div class="page-link disabled" id="pgjump_btn" href="/">
+                    <a >第</a>
+                    <input type="text" size="1" id="pgjump_content" title="Enter跳转" onkeyup="if(this.value==1){document.getElementById('pgjump_btn').href='/'}else{document.getElementById('pgjump_btn').href='/page'+this.value}" onkeydown="if(event.keyCode==13) {window.location=document.getElementById('pgjump_btn').href;return false;}">
+                    <a >页 / 共{{paginator.total_pages}}页</a>
+                </div>
+	        {% endif %}	        
+        {% endif %}	
+    </div>
+</div>
