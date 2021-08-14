@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/graph_theroy/cov
 tags: [课程] # 标签
 comments: true
 catalog: false
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/graph_theroy/cover.jpg
+# gh-repo:
+# gh-badge:
 ---
 
 本文展示图论一些定义概念及其之间的关系。

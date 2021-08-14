@@ -4,7 +4,11 @@ title: Git SSH使用SS加速 # 标题
 subtitle: Git在SSH协议下，使用SS加速clone # 子标题
 cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/cover.jpg # 封面图片
 tags: [git,shadowsocks,技术] # 标签
+comments: false
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitclonespeedup/cover.jpg
+# gh-repo:
+# gh-badge:
 ---
 本方法讲述在linux命令行下的git-clone加速方法。对于有可视化桌面的版本亦可使用本教程，但是有更简单的方法，搜索关键词即可。  
 

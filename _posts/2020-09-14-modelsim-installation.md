@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstalla
 tags: [modelsim, 技术] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsiminstallation/cover.png
+# gh-repo:
+# gh-badge:
 ---
 这篇文章教大家如何以学习为目的安装、破解ModelSim 10.X。   
 官网:  

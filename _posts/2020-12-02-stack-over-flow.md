@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/stack_overlow_at
 tags: [技术] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/stack_overlow_attack/cover.png
+# gh-repo:
+# gh-badge:
 ---
 
 本文带大家认识一下计算机中经常使用的溢出攻击，并认识到攻防犹如阴阳二级难解难分。  

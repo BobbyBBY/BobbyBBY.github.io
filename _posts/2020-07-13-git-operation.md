@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/cov
 tags: [git,技术] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/gitoperation/cover.jpg
+# gh-repo:
+# gh-badge:
 ---
 Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。本文以生动的形式介绍Git的基本操作，包括创建仓库、分支切换、操作回滚等。  
 

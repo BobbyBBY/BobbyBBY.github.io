@@ -3,11 +3,12 @@ layout: post # 页面类型
 title: GitHub Pages 博客 # 标题
 subtitle: 教大家如何创建一个和我这个一样的博客 # 子标题
 cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/githubpages/cover.png # 封面图片
-gh-repo: BobbyBBY/BobbyBBY.github.io
-gh-badge: [star, fork, follow]
 tags: [github,技术] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/githubpages/cover.png
+gh-repo: BobbyBBY/BobbyBBY.github.io
+gh-badge: [star, fork, follow]
 ---
 这篇文章是教大家如何创建一个和我这个一样的博客。
 GitHub Page，一般多用于托管个人的静态网站，所以现在很多人也用来它来搭建私人博客，也算是省去了购买服务器、域名等等一系列复杂的操作。搭建博客网站有各种各样的方法，像懂php的可以用WordPress，懂Java的可以用Jpress等等。如果你想简单和简约，那么我强烈推荐你使用Github Page。  
