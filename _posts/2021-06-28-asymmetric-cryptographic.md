@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/asymmetric_crypt
 tags: [算法] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/asymmetric_cryptographic/cover.png
+# gh-repo:
+# gh-badge:
 ---
 
 秘密是目前构建社会的必要元素之一。秘密天生需要保护性，失去保护的秘密便不再被称为秘密。保护秘密的方法有加密和隔离，本文讨论在存储、通信中保护秘密的加密体制之一——非对称加密体制。  

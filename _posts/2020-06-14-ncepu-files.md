@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/ncepufiles/cover
 tags: [文档] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/ncepufiles/cover.png
+# gh-repo:
+# gh-badge:
 ---
  “ 华北电力大学（保定）计算机科学与技术专业 ” 的资料，包括课件、实验代码以及实验报告。  
 

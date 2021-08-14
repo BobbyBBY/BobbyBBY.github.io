@@ -6,6 +6,9 @@ cover-img: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsimABC/cove
 tags: [modelsim, 技术] # 标签
 comments: true
 catalog: true
+image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/modelsimABC/cover.png
+# gh-repo:
+# gh-badge:
 ---
 这篇文章以一个实例带大家入门ModelSim 10.4。  
 
