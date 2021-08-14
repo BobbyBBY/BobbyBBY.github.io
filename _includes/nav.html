@@ -1,7 +1,14 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% endif %}">
   <div class="ie-tips">访问网页是否遇到问题？<a href="{{site.url}}/bby" target="_blank">科学加速</a><button onclick="closeietips()">  关闭</button></div>
   {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img alt="{{ site.title }} Logo" class="navbar-brand-logo-img" src="{{ site.title-img }}"/></a>
+    <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}">
+      <img alt="{{ site.title }} Logo" class="navbar-brand-logo-img" src="{{ site.title-img }}"/>
+      
+    </a>
+    <a class="navbar-brand navbar-brand-logo">
+      &nbsp 算法与技术——理论与实践
+    </a>
+    
   {%- elsif site.title -%}
     <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
   {%- endif -%}
