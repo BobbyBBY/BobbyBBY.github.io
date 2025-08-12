@@ -13,6 +13,38 @@
     <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
   {%- endif -%}
 
+<div id="banner" class="banner">时隔三年，句起行间</div>
+<script>
+  setTimeout(() => {
+    const banner = document.getElementById('banner');
+    if (banner) {
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 1s ease';
+      setTimeout(() => banner.style.display = 'none', 1000);
+    }
+  }, 1500);
+</script>
+
+<style>
+  .banner {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(90deg, #ff9a8b, #fecf9a);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+</style>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -59,3 +91,5 @@
   {% endif %}
 
 </nav>
+
+
