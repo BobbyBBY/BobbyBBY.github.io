@@ -9,6 +9,7 @@ catalog: true
 image: https://bobbybby.oss-cn-zhangjiakou.aliyuncs.com/img/server_installation/cover-outer.jpg
 # gh-repo:
 # gh-badge:
+ai-content: 0
 ---
 
 个人电脑有傻瓜装机软件，服务器可没有  
