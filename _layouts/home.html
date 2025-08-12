@@ -10,7 +10,18 @@ layout: page
   {% for post in posts %}
   <article class="post-preview">
     <a href="{{ post.url | relative_url }}">
-      <h2 class="post-title">{{ post.title }}</h2>
+      <h2 class="post-title">
+        {{ post.title }}
+        {% if post.ai-content %}
+          {% case post.ai-content %}
+            {% when 0 %}<span class="ai-indicator ai-handwritten">非AI</span>
+            {% when 1 %}<span class="ai-indicator ai-assisted">AI辅助</span>
+            {% when 2 %}<span class="ai-indicator ai-dominant">AI主导</span>
+            {% when 3 %}<span class="ai-indicator ai-full">AI</span>
+            {% endcase %}
+          {% else %}<span class="ai-indicator ai-handwritten">非AI</span>
+        {% endif %}
+      </h2>
 
       {% if post.subtitle %}
         <h3 class="post-subtitle">

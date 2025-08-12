@@ -634,7 +634,7 @@ footer .footer-custom-content {
   font-weight: 300;
   margin: 0.625rem 0 0;
 }
-.intro-header .post-heading .post-subheading {
+.intro-header .post-heading .post-subtitle {
   margin-bottom: 1.25rem;
 }
 .intro-header.big-img .page-heading .page-subheading,
@@ -1024,4 +1024,62 @@ pre {
 #backtop a:hover { /* 小按钮上有鼠标悬停时 */
   background: rgba(64,120,192,0.8); /* 小按钮的底色 */
   color: #fff; /* 文字颜色 */
+}
+
+.ai-indicator {
+  align-items: center;
+  justify-content: center;
+  padding: 3px 7px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+}
+
+.ai-indicator:hover::after {
+    content: 'AI：        文章AI撰写并发布\A AI主导：文章内容主要由AI撰写\A AI辅助：文章使用AI辅助撰写\A 非AI：    文章撰写未使用AI';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-10%);
+    background: rgba(128, 128, 128, 0.9);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    z-index: 10;
+    margin-top: 10px;
+    min-width: 170px;
+    max-width: 200px;
+  }
+
+.ai-indicator:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-handwritten {
+  color: #454545;
+  background-color: #fff;
+}
+
+.ai-assisted {
+  color: #ffffff;
+  background-color: #2d99ff;
+}
+
+.ai-dominant {
+  color: #ffffff;
+  background-color: #2457ff;
+}
+
+.ai-full {
+  color: #ffffff;
+  background-color: #3314f7;
 }
