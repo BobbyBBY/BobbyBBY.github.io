@@ -39,7 +39,7 @@ layout: page
       {% if post.image %}
       <div class="post-image">
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | relative_url }}">
+          <img src="{{ post.image | relative_url }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
         </a>
       </div>
       {% endif %}

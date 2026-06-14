@@ -227,3 +227,8 @@ Jekyll-Search: false
 # Beautiful Jekyll / Dean Attali
 # theme: jekyll-theme-cayman
 
+# --- Sass Compiler Options --- #
+sass:
+  sass_dir: _sass
+  sourcemap: never
+
