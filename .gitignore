@@ -17,3 +17,5 @@ w.html
 img/
 
 /draft
+.bundle/
+.vscode/
