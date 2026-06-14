@@ -9,7 +9,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4.0'
+          ruby-version: '3.4'
           bundler-cache: true
       - name: Build site
         run: bundle exec jekyll build
